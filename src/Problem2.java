@@ -13,6 +13,18 @@ private int maxSize;
 
     }
 
-    public void addy()
+    public void addy(Problem1Song p){
+        if(size == maxSize){
+            maxSize = maxSize * 2;
+            Problem1Song[] temp = new Problem1Song[maxSize];
+            for( int i = 0; i < size; i++){
+                temp[i] = songs[i];
+            }
+            songs = temp;
+        }
+
+        songs[size] = p;
+        size++;
+    }
 
 }
