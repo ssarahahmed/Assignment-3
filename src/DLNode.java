@@ -6,7 +6,7 @@ public class DLNode {
     public DLNode(Problem1Song song){
         this.song = song;
         this.next = null;
-        this.previous = null;
+        this.previous = null; // because it is a doubly linked
     }
 
 

@@ -15,20 +15,24 @@ public DLList(){
             current = current.next;
         }
 
+        // connect new node and update its previous pointer
         current.next = node;
         node.previous = current;
     }
     }
 
     public void removy(int pos){
-    if(pos == 0){
+    if(pos == 0){ // if the head is removed. move the head forward
         Head = Head.next;
     } else {
         DLNode current = Head;
+        // traverse to the node needed to be removed
         for(int i = 0; i < pos; i ++){
             current = current.next;
         }
+        // make previous node point past the current node
         current.previous.next = current.next;
+        // if there is a node after current, update its previous pointer
         if( current.next != null){
             current.next.previous = current.previous;
         }

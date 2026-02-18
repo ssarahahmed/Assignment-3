@@ -8,6 +8,7 @@ public class SLList {
 
     public void addy(Problem1Song s){
         SLNode node = new SLNode(s);
+        // if the list is empty the new node becomes the head
         if (Head == null){
             Head = node;
         } else{
@@ -23,9 +24,11 @@ public class SLList {
             Head = Head.next;
         } else{
             SLNode current = Head;
+            // stop one before pos to update te pointer
             for( int i = 0; i < pos - 1; i++){
                 current = current.next;
             }
+            // make current node skip over the next one
             current.next = current.next.next;
         }
     }

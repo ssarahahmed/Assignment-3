@@ -12,7 +12,7 @@ public class Problem1Song {
 
     public static void main(String[] args){
         Problem1Song Song = new Problem1Song("Hello", "Adele", 4.55);
-        
+        // create new song
         System.out.println("Title: " + Song.title + "\nArtist: " +
                 Song.artist + "\nLength: " + Song.length);
 
