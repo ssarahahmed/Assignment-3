@@ -17,4 +17,9 @@ public class Problem1Song {
                 Song.artist + "\nLength: " + Song.length);
 
     }
+
+    public String toString() {
+        return "Title: " + title + "\nArtist: " +
+                artist + "\nLength: " + length;
+    }
 }
